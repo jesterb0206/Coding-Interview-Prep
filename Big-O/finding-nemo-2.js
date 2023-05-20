@@ -1,4 +1,3 @@
-const fish = ['dory', 'bruce', 'marlin', 'nemo'];
 const nemo = ['nemo'];
 const everyone = [
   'dory',
@@ -12,20 +11,19 @@ const everyone = [
   'darla',
   'hank',
 ];
-const large = new Array(10).fill('nemo');
+const large = new Array(100000).fill('nemo');
 
-function findNemo2(fish) {
-  let t0 = performance.now();
-  for (let i = 0; i < fish.length; i++) {
-    if (fish[i] === 'nemo') {
+function findNemo(array) {
+  for (let i = 0; i < array.length; i++) {
+    console.log('Running!');
+    if (array[i] === 'nemo') {
       console.log('Found Nemo!');
+      break;
     }
   }
-  let t1 = performance.now();
-  console.log('Call to find Nemo took ' + (t1 - t0) + ' milliseconds.');
 }
 
-findNemo2(everyone); // O(n) --> Linear Time
+findNemo(everyone); // O(n) --> Linear Time
 
 const boxes = [0, 1, 2, 3, 4, 5];
 
