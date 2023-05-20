@@ -25,4 +25,13 @@ function findNemo2(fish) {
   console.log('Call to find Nemo took ' + (t1 - t0) + ' milliseconds.');
 }
 
-findNemo2(everyone);
+findNemo2(everyone); // O(n) --> Linear Time
+
+const boxes = [0, 1, 2, 3, 4, 5];
+
+function logFirstTwoBoxes(boxes) {
+  console.log(boxes[0]); // O(1)
+  console.log(boxes[1]); // O(1)
+}
+
+logFirstTwoBoxes(boxes); // O(2)
