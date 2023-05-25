@@ -130,3 +130,26 @@ const newArray = new MyArray();
 newArray.push('Hi!');
 newArray.pop();
 console.log(newArray);
+
+// Reversing a String
+
+function reverse(str) {
+  if (!str || typeof str != 'string' || str.length < 2) return str;
+
+  const backwards = [];
+  const totalItems = str.length - 1;
+  for (let i = totalItems; i >= 0; i--) {
+    backwards.push(str[i]);
+  }
+  return backwards.join('');
+}
+
+function reverse2(str) {
+  return str.split('').reverse().join('');
+}
+
+const reverse3 = (str) => [...str].reverse().join('');
+
+reverse('Bradley');
+reverse2('Rosalinda');
+reverse3('Prince');
